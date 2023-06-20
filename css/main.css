@@ -1,0 +1,570 @@
+
+.menu-principal{
+    width: 100%;
+    background-image: linear-gradient(white, #4b957dab);
+    height: 60px;
+    
+}
+
+main{
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    
+}
+
+.logo{
+    float: left;
+    padding: 5px;
+    width: 75%;
+}
+
+.rede-sociais ul li{
+    margin-left: 5px;
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+}
+
+.rede-sociais{
+    width: 20%;
+    float: right;
+}
+
+.header-2 {
+  background-color: #ffffff;
+  width: 980px;
+  border-bottom: 3px solid #4b957d8e;
+  margin: 0;
+  position: relative; 
+}
+
+.menu-horizontal {
+  background-color: #ffffffab;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-horizontal li {
+  display: inline-block;
+  position: relative; 
+}
+
+.menu-horizontal li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #4b957d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-horizontal li a:hover {
+  background-color: #4b957d;
+  color: #FFFFFF;
+}
+
+.menu-horizontal li ul {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 0;
+  left: 0; 
+  top: 100%;
+  z-index: 2; 
+}
+
+.menu-horizontal li:hover > ul {
+  display: block;
+}
+
+.menu-horizontal li ul li {
+  display: block;
+}
+
+
+.slide {
+    display: none;
+    width: 980px;
+}
+
+.slideshow-container {
+    position: relative;
+    
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #8bc7b4;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer;
+    margin-bottom: 50px;    
+}
+
+.active {
+    background-color: #4D987F;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid #4b957d8e;
+  border-bottom: 3px solid #4b957d8e;
+}
+
+.grid {
+  text-align: center;
+  padding: 20px;
+}
+
+.grid:nth-child(1) {
+  background-color: #ffffff00;
+  color: #458570;
+  
+}
+
+.grid img {
+    max-width: 100%;
+    max-height:1000px;
+    height: auto;
+}
+
+.containerAboutus {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.imageAboutus {
+	background-image: url("./cachorroegato2.jpg");
+  background-size: 980px;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 350px; 
+  
+}
+
+.mascara {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 980px;
+	height: 100%;
+	background-color: rgba(53, 101, 85, 0.641); 
+	z-index: 1;
+}
+
+.titulo {
+	color: #fff !important;
+	font-size: 32px;
+	padding-top: 50px; 
+	position: relative;
+	z-index: 2;
+}
+
+.texto {
+	color: #fff !important;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 20px;
+	padding: 0 20px;
+	padding-bottom: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+
+
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  
+  .grid-item {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; 
+  }
+  
+  
+  .news-title {
+    text-align: center;
+    color: #356555;
+  }
+  
+  .news-subtitle {
+    color: #3d8e73;
+  }
+  
+  .news-description {
+    color: #3d8e73;
+    margin-bottom: 20px;
+  }
+  
+  .news-button {
+    background-color: #3d8e73; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  }  
+
+  .news-button:hover {
+    background-color: #1e3830;
+  }
+  
+  .adote-content {
+    text-align: center;
+}
+
+.adote-title {
+    color: #356555;
+    text-transform: uppercase;
+}
+
+.adote-subtitle {
+    color: #458570;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.adote-subtitle a {
+  color: #458570;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.adote-subtitle a:visited {
+  color: #458570;
+}
+
+.adote-subtitle a:hover {
+  color: #1e3830;
+}
+
+.grid-containerAdote {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-itemAdote {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.grid-itemAdote img {
+    width: 100%;
+}
+
+.grid-itemAdote h2 {
+    margin-top: 10px;
+    color: #458570;
+}
+
+.grid-itemAdote a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.centro{
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(white, #4b957dab);
+  text-align: center;
+  height: 60px;
+  color: #3e7a66;
+}
+
+.centro a {
+color: #458570;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.centro a:visited {
+color: #458570;
+}
+
+.centro a:hover {
+color: #1e3830;
+}
+
+.rede-sociais ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rede-sociais li {
+  margin-left: 10px;
+}
+
+
+ 
+
+  h1 {
+    text-align: center;
+    color: #356555;
+  }
+
+  .card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .card {
+    width: 200px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background-image: url(./bgcao.jpeg);
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%; 
+    border: 4px solid #356555; 
+  }
+  
+  .card-list li {
+    list-style-type: none;
+    background: url(./pata.png) no-repeat  ;
+    background-size: 20px;
+    margin: 10px;
+    padding-left: 25px; 
+    color: #356555; 
+  }
+  
+
+  .adopt-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #458570;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .adopt-button:hover {
+    background-color: #356555;
+  }
+
+ 
+
+.containerDoar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titleDoar {
+    color:#356555;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.subtitleDoar{
+  color: #356555;
+  text-align: center;
+}
+
+.description {
+    color:#458570;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.bank-details {
+    color:#ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.donation-container {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url("./doar.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+
+.donation-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.donation-buttons button {
+  background-color: #3d8e73;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donation-buttons button:hover {
+  background-color: #1e3830;
+}
+.sponsorship {
+    color: #458570;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sponsorship a:visited {
+  color: #458570;
+}
+
+.sponsorship a:hover {
+  color: #1e3830;
+}
+
+
+.titleapad {
+  color: #356555;
+}
+
+.imgapad {
+  width: 980px;
+  height: 500px;
+  margin: auto;
+}
+
+.papad {
+  text-align: center;
+  width: 980px;
+  color: #458570;
+  margin: 20px 0;
+}
+
+.h4apad {
+  text-align: center;
+  width: 980px;
+  color: #356555;
+  margin-top: 20px;
+  border-top: 3px solid #4b957d8e;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3d8e73;
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1e3830;
+}
+
+.centered-list {
+  max-width: 980px;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.list-item {
+  color: #294c44;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 20px;
+}
+
+.list-item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 260px;
+  width: 20px;
+  height: 20px;
+  background-image: url(./pata.png);
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    display: block;
+    background-image: none;
+  }
+  
+  /*Cabeçalho*/
+  .menu-principal{
+      height: 600px;
+      height: 60vh;
+      justify-content: center;
+    }
+  
+
+  .header-2{
+    height: 600px;
+    height: 60vh;
+    justify-content: center;
+  }
+
+  .slideshow-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

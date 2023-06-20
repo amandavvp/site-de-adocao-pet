@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./imagem/patas.png" type="imagens/">
+    <title>Patinhas de Esperança</title>
+
+
+    <style>
+    
+    h2{
+      text-align: center;
+      color: #3d8e73;
+    }
+      
+      .containercadas {
+        width: 400px;
+        margin: 0 auto;
+      }
+      
+      input[type="text"], input[type="email"]{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        background-color: #3d8e73;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+    
+  
+    </style>
+
+</head>
+<body>
+  <header class="menu-principal">
+    <main>
+    <div class="header-1">
+    <div class="logo">
+        <img src="./imagem/logo.png" alt=logo" height="50px">
+    </div>
+    <div class="rede-sociais">
+        <ul>
+            <li><a href="https://www.facebook.com/"><img src="./imagem/fb.png" width="30px"></a></li>
+            <li><a href="https://twitter.com/"><img src="./imagem/twt.png" width="30px"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="./imagem/insta.png" width="30px"></a></li>
+        </ul>
+        </div>
+    </div>
+    </main>
+</header>
+    <main>
+      <div class="header-2">
+          <div class="menu-horizontal">
+              <center>
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="adote.html">Adote</a>
+                          <ul>
+                              <li><a href="caes.html">Cães</a></li>
+                              <li><a href="gatos.html">Gatos</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="doar.html">Doações</a></li>
+                      <li><a href="apadrinhe.html">Apadrinhe</a></li>
+                      <li><a href="cadastro.html">Cadastro</a></li>
+                  </ul>
+              </center>
+          </div>
+      </div>
+  </main>
+  
+  <h2>Cadastro</h2>
+  <center>
+  <div class="containercadas">
+    <form onsubmit="return validarCadastro()">
+        <input type="text" name="nome" placeholder="Nome" required pattern="[A-Za-z ]+" title="Digite apenas letras"><br>
+        <span id="nomeErro" class="erro"></span><br>
+        
+        <input type="text" name="cpf" class="cpf-mask" placeholder="CPF" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 999.999.999-99"><br>
+        <span id="cpfErro" class="erro"></span><br>
+        
+        <input type="email" name="email" placeholder="Email" required><br>
+        <span id="emailErro" class="erro"></span><br>
+        
+        <input type="text" name="contato" class="contato-mask" placeholder="Contato" required pattern="\(\d{2}\) \d{4,5}-?\d{4}" title="Digite o Contato no formato (99) 9999-9999 ou (99) 99999-9999"><br>
+        <span id="contatoErro" class="erro"></span><br>
+        
+        <input type="submit" value="Cadastrar">
+      </form>
+    
+      <div id="cadastroMensagem" class="mensagem" ></div>
+    </center>
+    </div>
+  
+    <center>
+  <img src="./imagem/gatocadas.jpeg" width="450px">
+    </center>
+
+
+  <footer>
+    <p class="centro">Email:
+    <a href="mailto:patinhasdaesperanca@yahoo.com.br">patinhasdaesperanca@yahoo.com.br</a><br>Somos uma Organização sem fins lucrativos e todas as fotos são públicas e exclusivas do PXhere.</p>
+  </footer>
+     
+<script>
+    const contatoInput = document.querySelector('.contato-mask');
+  
+    const formatarContato = () => {
+      let contato = contatoInput.value.replace(/\D/g, '');
+      let contatoFormatado = '';
+  
+      if (contato.length > 0) {
+        if (contato.length <= 2) {
+          contatoFormatado = `(${contato}`;
+        } else if (contato.length <= 6) {
+          contatoFormatado = `(${contato.substring(0, 2)}) ${contato.substring(2)}`;
+        } else if (contato.length <= 10) {
+          contatoFormatado = `(${contato.substring(0, 2)}) ${contato.substring(2, 6)}-${contato.substring(6)}`;
+        } else {
+          contatoFormatado = `(${contato.substring(0, 2)}) ${contato.substring(2, 7)}-${contato.substring(7, 11)}`;
+        }
+      }
+  
+      contatoInput.value = contatoFormatado;
+    };
+  
+    contatoInput.addEventListener('input', formatarContato);
+
+    const cpfInput = document.querySelector('.cpf-mask');
+
+  const formatarCPF = () => {
+    let cpf = cpfInput.value.replace(/\D/g, '');
+    let cpfFormatado = '';
+
+    if (cpf.length > 0) {
+      cpfFormatado = cpf.substring(0, 3);
+
+      if (cpf.length > 3) {
+        cpfFormatado += `.${cpf.substring(3, 6)}`;
+      }
+
+      if (cpf.length > 6) {
+        cpfFormatado += `.${cpf.substring(6, 9)}`;
+      }
+
+      if (cpf.length > 9) {
+        cpfFormatado += `-${cpf.substring(9, 11)}`;
+      }
+    }
+
+    cpfInput.value = cpfFormatado;
+  };
+
+  cpfInput.addEventListener('input', formatarCPF);
+
+  
+  function validarCadastro() {
+  var nomeInput = document.getElementsByName('nome')[0];
+  var cpfInput = document.getElementsByName('cpf')[0];
+  var emailInput = document.getElementsByName('email')[0];
+  var contatoInput = document.getElementsByName('contato')[0];
+
+  var nomeErro = document.getElementById('nomeErro');
+  var cpfErro = document.getElementById('cpfErro');
+  var emailErro = document.getElementById('emailErro');
+  var contatoErro = document.getElementById('contatoErro');
+
+  nomeErro.innerHTML = '';
+  cpfErro.innerHTML = '';
+  emailErro.innerHTML = '';
+  contatoErro.innerHTML = '';
+
+  if (!/^[A-Za-z ]+$/.test(nomeInput.value.trim())) {
+    nomeErro.innerHTML = 'Por favor, digite apenas letras.';
+    return false;
+  }
+
+  if (!/\d{3}\.\d{3}\.\d{3}-\d{2}/.test(cpfInput.value.trim())) {
+    cpfErro.innerHTML = 'Por favor, digite o CPF no formato 999.999.999-99.';
+    return false;
+  }
+
+  if (!emailInput.checkValidity()) {
+    emailErro.innerHTML = 'Por favor, digite um email válido.';
+    return false;
+  }
+
+  if (!/\(\d{2}\) \d{4,5}-?\d{4}/.test(contatoInput.value.trim())) {
+    contatoErro.innerHTML = 'Por favor, digite o Contato no formato (99) 9999-9999 ou (99) 99999-9999.';
+    return false;
+  }
+
+  exibirMensagemCadastro();
+  return false;
+}
+
+function exibirMensagemCadastro() {
+  var mensagem = document.getElementById('cadastroMensagem');
+  var numeroCadastro = Math.floor(Math.random() * 900000) + 100000;
+
+  var nomeInput = document.getElementsByName('nome')[0];
+  var cpfInput = document.getElementsByName('cpf')[0];
+  var emailInput = document.getElementsByName('email')[0];
+  var contatoInput = document.getElementsByName('contato')[0];
+
+  nomeInput.value = '';
+  cpfInput.value = '';
+  emailInput.value = '';
+  contatoInput.value = '';
+
+  mensagem.innerHTML = '<span style="color: #3d8e73;"><br><b>Cadastro realizado com sucesso! Seu número de cadastro é ' + numeroCadastro + '. Entraremos em contato nas próximas 24 horas.<b></span>'; 
+}
+  </script>
+  
+
+</body>
+</html>
+
